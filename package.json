@@ -1,0 +1,15 @@
+{
+    "name": "wsuwp-plugin-az-index",
+    "version": "0.0.1",
+    "description": "Plugin to manage and an A-Z Index of links.",
+    "main": "index.js",
+    "scripts": {
+        "start": "wp-scripts start assets/src/az-index-editor.js --output-path=assets/dist/",
+        "build": "wp-scripts build assets/src/az-index-editor.js --output-path=assets/dist/"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@wordpress/scripts": "^16.1.0"
+    }
+}

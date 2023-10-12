@@ -23,7 +23,7 @@
 				</ol>
 			</nav>
 			<form action="" method="GET" class="wsu-az-index__search-form">
-				<input type="text" class="wsu-az-index__search-input" name="search" placeholder="Search" value="<?php echo esc_attr( $_GET['search'] ); ?>">
+				<input type="text" class="wsu-az-index__search-input" name="search" placeholder="Search" value="<?php echo esc_attr( $_GET['search'] ?? '' ); ?>">
 			</form>
 		</div>
 		<?php

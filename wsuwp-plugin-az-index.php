@@ -3,7 +3,7 @@
  * Plugin Name: WSUWP A-Z Index
  * Plugin URI: https://github.com/wsuwebteam/wsuwp-plugin-az-index
  * Description: Plugin to manage and an A-Z Index of links.
- * Version: 0.0.1
+ * Version: 0.0.2
  * Requires PHP: 7.0
  * Author: Washington State University, Danial Bleile, Dan White
  * Author URI: https://web.wsu.edu/

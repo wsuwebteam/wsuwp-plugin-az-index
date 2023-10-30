@@ -36,7 +36,7 @@ class BlockAZIndex {
 
 	private static function get_selected_letter( $link_groups, $grouped_links ) {
 
-		$c = esc_attr( $_GET['c'] );
+		$c = esc_attr( $_GET['c'] ?? '' );
 
 		if ( isset( $c ) && in_array( strtoupper( $c ), $link_groups, true ) ) {
 			return self::get_group_label( strtoupper( $c ) );

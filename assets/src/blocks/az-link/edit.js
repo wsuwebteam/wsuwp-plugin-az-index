@@ -34,7 +34,9 @@ export default function Edit(props) {
                     <h1 className={`${CSSNAMESPACE}__post-title`}>
                         <RichText
                             placeholder="Link Name"
-                            multiline={false}
+                            multiline={false} // prevent linebreaks
+                            onReplace={() => {}} // prevent linebreaks
+                            onSplit={() => {}} // prevent linebreaks
                             allowedFormats={[]}
                             onChange={(title) => editPost({ title: title })}
                             value={postTitle ? postTitle : ""}

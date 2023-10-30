@@ -1,4 +1,4 @@
-const { InspectorControls } = wp.blockEditor;
+const { InspectorControls, useBlockProps } = wp.blockEditor;
 const { PanelBody, PanelRow, CheckboxControl, SelectControl } = wp.components;
 
 import React, { useState, useEffect } from "react";
@@ -50,6 +50,9 @@ const bLinks = [
 
 export default function Edit(props) {
     const { attributes, setAttributes } = props;
+    const blockProps = useBlockProps({
+        className: CSSNAMESPACE,
+    });
 
     return (
         <>
@@ -77,7 +80,7 @@ export default function Edit(props) {
                 </PanelBody>
             </InspectorControls>
 
-            <div className={`${CSSNAMESPACE}`}>
+            <div {...blockProps}>
                 <div className={`wsu-az-index ${attributes.className || ""}`}>
                     {!attributes.showAllLinks && (
                         <>
@@ -88,8 +91,11 @@ export default function Edit(props) {
                                     aria-label="A-Z Index Navigation"
                                 >
                                     <ol className="wsu-az-index__nav-list">
-                                        {linkGroups.map((group) => (
-                                            <li className="wsu-az-index__nav-item">
+                                        {linkGroups.map((group, i) => (
+                                            <li
+                                                key={i}
+                                                className="wsu-az-index__nav-item"
+                                            >
                                                 <a
                                                     href="#"
                                                     className="wsu-az-index__nav-link wsu-button"
@@ -117,8 +123,11 @@ export default function Edit(props) {
                             A
                         </attributes.headingLevel>
                         <ol className="wsu-az-index__link-list">
-                            {aLinks.map((l) => (
-                                <li className="wsu-az-index__link-list-item">
+                            {aLinks.map((l, i) => (
+                                <li
+                                    key={i}
+                                    className="wsu-az-index__link-list-item"
+                                >
                                     <a
                                         href="#"
                                         className="wsu-az-index__link-list-link"
@@ -144,8 +153,11 @@ export default function Edit(props) {
                                 B
                             </attributes.headingLevel>
                             <ol className="wsu-az-index__link-list">
-                                {bLinks.map((l) => (
-                                    <li className="wsu-az-index__link-list-item">
+                                {bLinks.map((l, i) => (
+                                    <li
+                                        key={i}
+                                        className="wsu-az-index__link-list-item"
+                                    >
                                         <a
                                             href="#"
                                             className="wsu-az-index__link-list-link"

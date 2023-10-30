@@ -78,7 +78,7 @@ class Page_Import_Links {
 	private static function import_links( $links ) {
 
 		$fallback_user    = get_user_by( 'slug', 'wsu.support' );
-		$fallback_user_id = isset( $fallback_user ) ? $fallback_user->ID : 0;
+		$fallback_user_id = isset( $fallback_user->ID ) ? $fallback_user->ID : 0;
 
 		foreach ( $links as $link ) {
 			if ( ! $link ) {
@@ -91,7 +91,7 @@ class Page_Import_Links {
 				'ID'            => 0,
 				'post_title'    => $link['linkTitle'],
 				'post_status'   => 'publish',
-				'post_author'   => isset( $user ) ? $user->ID : $fallback_user_id,
+				'post_author'   => isset( $user->ID ) ? $user->ID : $fallback_user_id,
 				'post_type'     => 'az_link',
 				'post_date'     => gmdate( 'Y-m-d H:i:s', strtotime( $link['dateCreated'] ) ),
 				'post_modified' => gmdate( 'Y-m-d H:i:s', strtotime( $link['dateModified'] ) ),

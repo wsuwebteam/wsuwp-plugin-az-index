@@ -3,6 +3,7 @@ import { registerBlockType } from "@wordpress/blocks";
 import Edit from "./edit";
 
 registerBlockType("wsuwp/az-index", {
+    apiVersion: 2,
     title: "A-Z Index",
     icon: "index-card",
     category: "advanced",

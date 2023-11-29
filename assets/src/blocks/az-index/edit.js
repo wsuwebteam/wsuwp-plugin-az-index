@@ -1,7 +1,9 @@
-const { InspectorControls, useBlockProps } = wp.blockEditor;
-const { PanelBody, PanelRow, CheckboxControl, SelectControl } = wp.components;
-
-import React, { useState, useEffect } from "react";
+import { InspectorControls, useBlockProps } from "@wordpress/block-editor";
+import {
+    PanelBody,
+    CheckboxControl,
+    SelectControl,
+} from "@wordpress/components";
 
 import "./styles.scss";
 

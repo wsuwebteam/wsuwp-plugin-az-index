@@ -1,5 +1,4 @@
-const { RichText } = wp.blockEditor;
-
+import { RichText } from "@wordpress/block-editor";
 import { TextControl, TextareaControl } from "@wordpress/components";
 import { useSelect, useDispatch } from "@wordpress/data";
 

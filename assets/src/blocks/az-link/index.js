@@ -3,6 +3,7 @@ import { registerBlockType } from "@wordpress/blocks";
 import Edit from "./edit";
 
 registerBlockType("wsuwp/az-link", {
+    apiVersion: 2,
     title: "Link",
     icon: "admin-links",
     category: "advanced",
